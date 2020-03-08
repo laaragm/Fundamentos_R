@@ -1,0 +1,34 @@
+Introdução ao R
+
+- install.packages("e1071", dependencies = TRUE) #instala o pacote - só uma vez
+- library(e1071) #carrega o pacote - sempre que precisar usar
+- getwd() #saber o diretório padrão
+- setwd("c:\\dados") #alterando o diretório padrão
+- class(iris) #retorna o tipo do objeto passado como parâmetro
+- save(objetos, file="arquivo.Rdata") #salvando objetos
+- load(file="arquivo.Rdata") #carregando objetos
+- Visualização de dados: plot(), hist(), boxplot()
+- cat("\014") #limpa o console
+
+- Você pode clicar duas vezes em uma linha específica e depois "Run" para executar os comandos apenas do que foi previamente selecionado naquela linha específica
+
+- Tipos de dados: Caractere, Numérico, Inteiro, Fator
+- Atribuição de valor: '=' ou '<-' (as duas funcionam da mesma forma)
+- Declaração de variáveis: implícita - define automaticamente de acordo com os dados da variável
+- True/False pode ser representado como 'TRUE', 'FALSE', 'T' ou 'F'
+- Linguagem Vetorial: capaz de operar vetores e matrizes diretamente sem a necessidade de "loops"
+- Cada vetor só pode ter um tipo de dados, não pode misturar
+- Data Frame: são tabelas de dados; tem duas dimensões (semelhante a matrizes); permite diferentes tipos de dados por coluna; linhas e colunas podem ter nomes. Sintaxe para acessar dados: nome_data_frame(linha, coluna) ou nome_data_frame$nome_da_coluna 
+- Listas: objetos encadeados em sequências (de classes diferentes)
+
+- Para conjuntos de dados grandes, é mais prático gerar um arquivo de texto a partir de uma planilha ou banco de dados, e usar a função read.table() para ler os dados para um objeto no R.
+
+- read.csv() #transforma arquivo em um objeto data frame do R
+- Conectando Banco de Dados: Pacote RODBC permite a conexão com qualquer DBMS (Data Base Management System) que admite conexão com o driver ODBC (SQL Server, Access, MySQL, Oracle, PostgreSQL, SQLite) 
+	- odbcDriverConnect() #conexão com o sistema gerenciador de banco de dados
+	- sqlFetch() #lê uma tabela e a carrega em um data frame
+	- sqlQuery() #faz uma consulta sql e retorna o resultando criando um objeto Data Frame
+	- odbcClose() #fecha a conexão 
+- read.xlsx() #Pacote xlsx para ler uma planilha do Excel
+
+
